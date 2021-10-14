@@ -1,22 +1,25 @@
 import React from 'react'
 
-
 function Todoitem(props) {
+
+function handleChange() {
+        console.log("complete")
+    return <p>{props.affirmation}</p>
+}
+
+
     return (
         <div>
-            <p>{props.id}</p>
             <p>{props.task}</p>
             <p>{props.requiresConcentration}</p>
             <p>{props.howOften}</p>
-            <p>{props.affirmation}</p>
-            
-            <input 
-            type="checkbox" 
-            onChange={()=> props.handleChange(props.id)}></input>
-
-            {props.completed === true ? <h2>Not yet completed</h2> : <h2>Complete!</h2>}
+            <input type="checkbox" 
+            onChange={handleChange}></input>
         </div>
-    )
+    ) 
+
 }
 
+
 export default Todoitem
+
