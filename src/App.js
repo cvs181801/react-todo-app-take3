@@ -22,6 +22,7 @@ handleChange(id) {
     const updatedTodos = prevState.todos.map(todo => {
       if (todo.id === id) {
         todo.completed = !todo.completed
+        console.log(todo.id, "changed", todo.completed)
       }
       return todo
     })
