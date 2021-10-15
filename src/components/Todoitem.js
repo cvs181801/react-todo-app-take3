@@ -10,7 +10,7 @@ const completedStyle = {
     return (
         <div>
              <input type="checkbox" 
-                //checked={props.completed}
+                //checked={props.completed} This part was messing up the whole thing, I'm not sure why...
                 onChange={()=> props.handleChange(props.id)}></input>
             <p style={props.completed ? completedStyle : null}>{props.task}</p>
             <p>{props.requiresConcentration}</p>
