@@ -16,7 +16,7 @@ handleChange(id) {
     const updatedTodos = prevState.todos.map(todo => {
       if (todo.id === id) {
         console.log(id, todo.id, "changed", todo.completed, !todo.completed)
-       return todo.completed = !todo.completed;
+        todo.completed = !todo.completed;
         
       }
       return todo
@@ -24,13 +24,22 @@ handleChange(id) {
     return {
       todos: updatedTodos
     }
+  
   })
+
+}
+
+handleChangeH1() {
+  let strangeThing = {trueThing: true};
+  strangeThing.trueThing = !strangeThing.trueThing;
+  console.log(strangeThing);
 }
 
 render() {
   return (
     <div className="App">
-        <h1>To Do's</h1>
+        <h1 onClick={this.handleChangeH1}>To Do's</h1>
+      
 
   {Todolist.map(item => <Todoitem key={item.id} id={item.id} task={item.task} 
     requiresConcentration={item.requiresConcentration} howOften={item.howOften} affirmation={item.affirmation}
