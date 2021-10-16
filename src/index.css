@@ -2,6 +2,7 @@
   --black: rgb(20, 19, 19);
   --light-grey: rgb(184, 179, 179);
   --light-aqua: rgb(170, 247, 247);
+  --dark-aqua: rgb(0, 223, 223);
   --ff-main: sans-serif;
 
 }
@@ -43,7 +44,7 @@ h1 {
   margin-left: .4em;
   padding: .2em;
   border-radius: 7px;
-  border: .5px solid aqua;
+  border: .5px solid var(--dark-aqua);
   max-width: 14vw;
   
 }
