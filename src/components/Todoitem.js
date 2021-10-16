@@ -4,6 +4,7 @@ import React from 'react'
 function Todoitem(props) {
 
     console.log("complete? ", props.completed)
+const affirmationDiv = document.querySelector(".todoitem__affirm");
 
 const completedStyle = {
     textDecoration: "line-through"
@@ -11,9 +12,11 @@ const completedStyle = {
 
 function celebrateComplete(complete, affirmation) {
     if (complete) {
-        console.log(props.affirmation)
-        return <p>{props.affirmation}</p>
-    }
+        console.log(affirmation)
+        return <p>{affirmation}</p>
+    } //else {
+        //affirmationDiv.classList.add("hidden");
+    //}
 }
     return (
         <div className="todoitem"> 
@@ -22,7 +25,7 @@ function celebrateComplete(complete, affirmation) {
                     onChange={()=> props.handleChange(props.id)}></input>
                 </div>   
             <p style={props.completed ? completedStyle : null}>{props.task}</p>     
-            <div className="todoitem__affirm">{celebrateComplete(props.completed, props.affirmation)}</div>    
+            <div className="todoitem__affirm">{celebrateComplete(props.completed, props.affirmation)}{props.emoji}</div>    
         </div>
     ) 
 }
