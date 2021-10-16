@@ -22,7 +22,7 @@ function celebrateComplete(complete, affirmation) {
                     onChange={()=> props.handleChange(props.id)}></input>
                 </div>   
             <p style={props.completed ? completedStyle : null}>{props.task}</p>     
-            <div>{celebrateComplete(props.completed, props.affirmation)}</div>    
+            <div className="todoitem__affirm">{celebrateComplete(props.completed, props.affirmation)}</div>    
         </div>
     ) 
 }
