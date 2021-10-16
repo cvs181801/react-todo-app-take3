@@ -17,11 +17,17 @@ handleChange(id) {
   this.setState(prevState => {
     const updatedTodos = prevState.todos.map(todo => {
       if (todo.id === id) {
-        return todo.completed = !todo.completed;  
+        return {
+          todo.id: todo.id,
+          todo.task: todo.task,
+          todo.requiresConcentration: todo.requiresConcentration,
+          todo.howOften: todo.howOften,
+          todo.affirmation: todo.affirmation,
+          todo.completed: (todo.completed = !todo.completed)
+        }    
       } else {
         return todo;
-      }
-    })
+      })
     console.log(updatedTodos);
     return {
       todos: updatedTodos
