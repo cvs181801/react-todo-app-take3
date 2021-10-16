@@ -4,6 +4,7 @@
 :root {
   --black: rgb(20, 19, 19);
   --light-grey: rgb(219, 193, 186);
+  --med-earth: rgb(214, 135, 98);
   --light-aqua: rgb(170, 247, 247);
   --dark-aqua: rgb(0, 223, 223);
   --ff-main: 'Josefin Sans', sans-serif;
@@ -32,7 +33,12 @@ h1 {
   margin-bottom: .75em;
   margin-top: .75em;
   font-family: var(--ff-accent);
-  
+}
+
+.underline {
+  margin: 0 auto;
+  border: 2px solid var(--med-earth);
+  max-width: 30vw;
 }
 
 .todoitem {
