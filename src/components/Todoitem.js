@@ -2,7 +2,7 @@ import React from 'react'
 
 function Todoitem(props) {
 
-    console.log(props.completed)
+    console.log("complete? ", props.completed)
 
 const completedStyle = {
     textDecoration: "line-through"
@@ -10,7 +10,7 @@ const completedStyle = {
     return (
         <div>
              <input type="checkbox" 
-                //checked={props.completed} This part was messing up the whole thing, I'm not sure why...
+                //checked={props.completed} 
                 onChange={()=> props.handleChange(props.id)}></input>
             <p style={props.completed ? completedStyle : null}>{props.task}</p>
             <p>{props.requiresConcentration}</p>
