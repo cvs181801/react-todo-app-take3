@@ -1,6 +1,7 @@
 import React from "react"
 import Todolist from "./components/Todolist"
 import Todoitem from "./components/Todoitem"
+import './index.css';
 
 class App extends React.Component {
 constructor() {

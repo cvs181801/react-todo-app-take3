@@ -1,4 +1,5 @@
 import React from 'react'
+//import './index.css'
 
 function Todoitem(props) {
 
@@ -8,13 +9,13 @@ const completedStyle = {
     textDecoration: "line-through"
 }
     return (
-        <div>
-             <input type="checkbox" 
-                //checked={props.completed} 
-                onChange={()=> props.handleChange(props.id)}></input>
-            <p style={props.completed ? completedStyle : null}>{props.task}</p>
-            <p>{props.requiresConcentration}</p>
-            <p>{props.howOften}</p>
+        <div className="todoitem"> 
+            <div className="todoitem__checkbox">
+                <input type="checkbox" 
+                    
+                    onChange={()=> props.handleChange(props.id)}></input>
+                </div>   
+            <p style={props.completed ? completedStyle : null}>{props.task}</p>         
         </div>
     ) 
 }
