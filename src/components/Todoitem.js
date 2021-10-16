@@ -15,7 +15,6 @@ const completedStyle = {
             <p style={props.completed ? completedStyle : null}>{props.task}</p>
             <p>{props.requiresConcentration}</p>
             <p>{props.howOften}</p>
-           
         </div>
     ) 
 }
