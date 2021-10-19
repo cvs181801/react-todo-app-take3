@@ -39,9 +39,9 @@ render() {
       <div className="App">
           <h1>To Do's</h1>    
           <hr className="underline"></hr>
-        {this.state.todos.map(item => <Todoitem key={item.id} id={item.id} task={item.task} 
+        {(this.state.todos !== undefined && this.state.todos.length > 0) && (this.state.todos.map(item => <Todoitem key={item.id} id={item.id} task={item.task} 
           requiresConcentration={item.requiresConcentration} howOften={item.howOften} affirmation={item.affirmation}
-          completed={item.completed} emoji={item.emoji} handleChange={this.handleChange} />) }
+          completed={item.completed} emoji={item.emoji} handleChange={this.handleChange} />)) }
     </div>
     );
   }
